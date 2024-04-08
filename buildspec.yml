@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Checking for index.html..."
+      - if [ ! -f index.html ]; then exit 1; fi
+  build:
+    commands:
+      - echo "Build completed."
+
+artifacts:
+  files:
+    - '**/*'
